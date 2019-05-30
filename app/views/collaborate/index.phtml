@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Board Colaboration </h2>
+
+<div class="container">
+
+<?php
+
+?>
+
+<form  action="/collaborate/save" method="post">
+<br>
+<select name="example" onChange="OnSelect()">
+<?php foreach($board as $boa) { ?> 
+  <option value="<?= $boa->ip; ?>" ><?= $boa->ip ."|".  $boa->inserted;  ?></option>
+ <?php } ?>
+ </select>
+<br>
+<br>
+  <textarea name="text" style="width:200px; height:400px;" value="<?= $boa->content; ?>">
+  <?= $boa->ip; ?> <br>
+  <?= $boa->content; ?> <br>
+  <?= $boa->inserted; ?> <br>
+
+   </textarea>
+<br>
+   <input type="submit" name="save" value="save">
+</form>
+
+</div>
+
+<script>
+
+function OnSelect(){
+   <?= 'Test' ?>
+}
+
+</script>
+
+    
+  
+</body>
+</html>
